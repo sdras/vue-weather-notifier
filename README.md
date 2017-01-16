@@ -1,5 +1,6 @@
-# vue-weather-notifier
-A small SVG animation illustrating a weather app notification in Vue
+# notifier
+
+> Playing with Vue Transitions and GreenSock
 
 ## Build Setup
 
@@ -14,3 +15,4 @@ npm run dev
 npm run build
 ```
 
+For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

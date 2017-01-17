@@ -121,16 +121,19 @@
 <script>
 	export default {
 		mounted () {
-			let tl = new TimelineMax(),
+			let audio = new Audio('static/wind.mp3'),
+                tl = new TimelineMax(),
 					easeConfig = CustomEase.create("custom", "M0,0 C0,0 0.012,-0.064 0.015,-0.076 0.03,0.05 0.057,-0.052 0.075,-0.042 0.06,0.344 0.123,0.258 0.125,0.266 0.125,0.258 0.114,-0.039 0.14,-0.039 0.184,-0.039 0.165,0.205 0.175,0.29 0.211,0.303 0.26,0.108 0.315,0.341 0.316,0.329 0.324,0.275 0.325,0.272 0.325,0.277 0.338,0.385 0.34,0.395 0.354,0.512 0.413,0.263 0.42,0.251 0.478,0.108 0.445,0.432 0.46,0.532 0.474,0.559 0.516,0.392 0.5,0.608 0.472,0.802 0.633,0.486 0.65,0.471 0.651,0.491 0.657,0.602 0.66,0.65 0.678,0.659 0.67,0.8 0.73,0.685 0.764,0.789 0.778,1.144 0.845,1.029 0.846,1.026 0.858,0.989 0.86,0.984 0.87,1.002 0.926,0.822 0.96,1.151 0.964,1.136 1,1 1,1");
 
+            audio.play();
+            audio.volume = 0.2;
 			TweenMax.set("#hat", {
 				x: -120
 			});
 
 			tl.add("wind");
 
-			//drops in
+			//wind timeline
 			tl.fromTo(".windbox", 1.5, {
 				rotation: -10,
 				x: -6,
@@ -139,7 +142,7 @@
 				x: -6,
 				y: 3,
 				rotation: 10,
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				transformOrigin: "0% 80%",
 				ease: easeConfig
@@ -149,7 +152,7 @@
 				attr: {
 					d: "M321.6,240.6c-18.9-5.4-28.7-.7-27.6,11.7.1.9.3,2.6-.4,3.2v-.8C292,240.6,299.9,239.1,321.6,240.6Z"
 				},
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				ease: easeConfig
 			}, "wind");
@@ -157,7 +160,7 @@
 			tl.to(".leaf2", 1.5, {
 				rotation: 8,
 				transformOrigin: "0 100%",
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				ease: easeConfig
 			}, "wind");
@@ -165,7 +168,7 @@
 			tl.to(".leaf3", 1.5, {
 				rotation: 4,
 				transformOrigin: "0 100%",
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				ease: easeConfig
 			}, "wind");
@@ -174,7 +177,7 @@
 				attr: {
 					d: "M259.8,205.8c-10.9-.8-15.1,2.6-20.4,10.7-1.9,2.9-1.7,10.9-1.5,14.5C241.5,214.4,248.3,213.3,259.8,205.8Z"
 				},
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				ease: easeConfig
 			}, "wind");
@@ -183,7 +186,7 @@
 				attr: {
 					d: "M257.7,211.1c-7.7,1.2-16.4,1.7-18.2,11.6-.7,3.6-1.5,4.6-1.6,8.2C243.3,214.3,249.8,218,257.7,211.1Z"
 				},
-				repeat: 4,
+				repeat: 2,
 				yoyo: true,
 				ease: easeConfig
 			}, "wind");

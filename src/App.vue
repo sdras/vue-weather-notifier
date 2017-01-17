@@ -34,8 +34,8 @@
               @leave="leaveDroparea"
               :css="false">
             <g v-if="showWeather">
-              <app-windarea v-if="template === 1"></app-windarea>
-              <app-droparea v-else-if="template === 2"></app-droparea>
+              <app-droparea v-if="template === 1"></app-droparea>
+              <app-windarea v-else-if="template === 2"></app-windarea>
               <app-rainbowarea v-else-if="template === 3"></app-rainbowarea>
               <app-tornadoarea v-else></app-tornadoarea>
             </g>
@@ -188,6 +188,10 @@
 </script>
 
 <style>
+  body {
+    overflow: hidden;
+  }
+
   #app {
     font-family: 'Titillium Web', sans-serif;
   }
@@ -200,7 +204,7 @@
     transition: opacity .25s
   }
 
-  .fadeout-enter, .fadeout-leave-to /* .fade-leave-active in <2.1.8 */ {
+  .fadeout-enter, .fadeout-leave-to {
     opacity: 0
   }
 

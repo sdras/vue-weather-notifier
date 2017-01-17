@@ -160,8 +160,10 @@
 <script>
 	export default {
 		mounted () {
-			let tl = new TimelineMax();
-
+      let audio = new Audio('static/rain.mp3'),
+          tl = new TimelineMax();
+      
+      audio.play();
 			tl.add("drops");
 
 			//drops in
@@ -255,7 +257,3 @@
 		}
 	}
 </script>
-
-<style scoped>
-	
-</style>

@@ -78,9 +78,6 @@
       }
     },
     methods: {
-      toggle() {
-        this.$store.commit('toggle');
-      },
       updateTemplate() {
         this.$store.commit('updateTemplate');
       },
